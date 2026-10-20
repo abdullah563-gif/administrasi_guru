@@ -1,0 +1,36 @@
+[
+  {
+    "id": "usr_admin_001",
+    "name": "Administrator Admin Guru",
+    "email": "admin@adminguru.id",
+    "password": "admin123",
+    "nip": "198001012005011001",
+    "schoolName": "Dinas Pendidikan / Kemenag Pusat",
+    "schoolType": "SD",
+    "role": "admin",
+    "status": "active",
+    "activationToken": "AG-ADMIN-SUPER",
+    "tokenCreatedAt": "2026-01-01T08:00:00.000Z",
+    "registeredAt": "2026-01-01T08:00:00.000Z",
+    "activatedAt": "2026-01-01T08:00:00.000Z",
+    "notes": "Akun Utama Administrator Sistem",
+    "lastLoginAt": "2026-10-20T01:00:42.505Z"
+  },
+  {
+    "id": "usr_1792458001002_gh9gz",
+    "name": "Nurul Hidayah, S.Pd.",
+    "email": "nurul.hidayah@guru.sd.belajar.id",
+    "password": "nurul123",
+    "nip": "199108152018032004",
+    "schoolName": "SD Negeri Cempaka Putih 01",
+    "schoolType": "SD",
+    "role": "teacher",
+    "status": "active",
+    "activationToken": "AG-P94V-ELM4",
+    "tokenCreatedAt": "2026-10-20T01:00:01.002Z",
+    "registeredAt": "2026-10-20T01:00:01.002Z",
+    "notes": "Pendaftar baru melalui formulir registrasi",
+    "lastLoginAt": "2026-10-20T01:01:24.004Z",
+    "activatedAt": "2026-10-20T01:00:56.164Z"
+  }
+]

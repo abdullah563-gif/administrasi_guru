@@ -1,0 +1,50 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Akun guru dan administrator pada platform Admin Guru SD/MI",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "nip": { "type": "string" },
+        "schoolName": { "type": "string" },
+        "schoolType": { "type": "string", "enum": ["SD", "MI"] },
+        "role": { "type": "string", "enum": ["admin", "teacher"] },
+        "status": { "type": "string", "enum": ["pending_activation", "active", "suspended"] },
+        "activationToken": { "type": "string" },
+        "tokenCreatedAt": { "type": "string", "format": "date-time" },
+        "registeredAt": { "type": "string", "format": "date-time" },
+        "activatedAt": { "type": "string", "format": "date-time" },
+        "lastLoginAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "name", "email", "schoolName", "role", "status", "registeredAt"]
+    },
+    "ActivationToken": {
+      "title": "ActivationToken",
+      "description": "Token aktivasi akun yang digenerate oleh Panel Admin",
+      "type": "object",
+      "properties": {
+        "token": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userEmail": { "type": "string" },
+        "status": { "type": "string", "enum": ["unused", "used", "revoked"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "usedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["token", "userId", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Koleksi data profil guru dan admin"
+    },
+    "/tokens/{tokenId}": {
+      "schema": { "$ref": "#/entities/ActivationToken" },
+      "description": "Koleksi token aktivasi akun guru"
+    }
+  }
+}

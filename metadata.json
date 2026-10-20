@@ -1,0 +1,8 @@
+{
+  "name": "Remix Admin Guru - Administrasi Guru Otomatis SD/MI",
+  "description": "Platform sederhana \u0026 profesional untuk guru SD dan MI dalam menyusun dan mengelola RPP/Modul Ajar, Prota, Promes, Jurnal Mengajar, serta Asesmen dengan ekspor DOCX \u0026 PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
